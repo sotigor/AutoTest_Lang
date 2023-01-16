@@ -13,7 +13,7 @@ def pytest_addoption(parser):
 def browser(request):
     browser_name = request.config.getoption("browser_name")
     browser = None
-    lang_list = ["ua", "ru", "es", "en-gb", "fr"]
+    lang_list = ["uk", "ru", "es", "en-gb", "fr"]
     user_language = request.config.getoption("language")
     if user_language not in lang_list:
         raise pytest.UsageError(f"--lang should be one from the list: {lang_list}")
